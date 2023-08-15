@@ -1,0 +1,33 @@
+Proyecto Final
+- Naideline Rivera Aguilar
+
+# Pokédex App
+
+Esta es una aplicación Pokédex simple que te permite ver, registrar y administrar información de diferentes Pokémon.
+
+## Requisitos previos
+
+- Node.js: Asegúrate de tener Node.js instalado en tu máquina. Puedes descargarlo desde https://nodejs.org/.
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+
+git clone https://github.com/tu-usuario/pokedex-app.git
+
+2. Instala las dependencias del proyecto:
+
+npm install
+
+3. Configuración de la base de datos:
+
+Asegúrate de tener MongoDB instalado en tu máquina. Puedes descargarlo desde https://www.mongodb.com/try/download/community.
+Crea una base de datos llamada "pokemongo" en tu instancia local de MongoDB.
+
+3. Inicia el servidor:
+
+npm start
+
+4. Abre tu navegador web y accede a la dirección para ver la Pokédex App en funcionamiento:
+
+http://localhost:3000 
