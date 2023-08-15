@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex - Registro de Pokémon</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <img src="images/pokemon-logo.png" alt="" class="pokedexLogo">
+
+  <form id="pokemon-form" enctype="multipart/form-data">
+    <label for="type">Tipo:</label>
+    <input type="text" id="type" name="type" required><br>
+
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" required></textarea><br>
+
+    <label for="evolution">Tiene Evolución:</label>
+    <input type="checkbox" id="evolution" name="evolution"><br>
+
+    <label for="weaknesses">Debilidades:</label>
+    <input type="text" id="weaknesses" name="weaknesses" required><br>
+
+    <label for="image">Imagen:</label>
+    <input type="file" id="image" name="image" accept=".png" required><br>
+
+    <button type="submit">Registrar Pokémon</button>
+  </form>
+
+  <div class="searching">
+    <input type="text" id="search-input" placeholder="Buscar por nombre o tipo" class="search">
+    <button id="search-button">Buscar</button>
+  </div>
+  
+  <div class="pokedex" id="pokemon-container">
+   <img src="/images/${pokemon.image}" alt="${pokemon.name}">
+  <div class="info">
+    <button class="edit-button" data-id="${pokemon._id}">Editar</button>
+    <button class="delete-button" data-id="${pokemon._id}">Eliminar</button>
+  </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
