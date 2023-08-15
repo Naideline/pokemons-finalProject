@@ -69,14 +69,14 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 8, 0.8);
   border-radius: 8px;
   overflow: hidden;
-  text-align: center; 
+  text-align: center;
 }
 
 #pokemon-form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  text-align: left; 
+  text-align: left;
 }
 
 #pokemon-form input[type="text"],
@@ -109,7 +109,7 @@ h1 {
 }
 
 /* Estilos para el input de búsqueda */
-#search-input {
+.search-input {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -117,8 +117,8 @@ h1 {
 }
 
 /* Estilos para el botón de búsqueda */
-#search-button {
-  background-color: #4caf50;
+.search-button {
+  background-color: #5fce63;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -128,10 +128,49 @@ h1 {
   transition: background-color 0.3s ease-in-out;
 }
 
-#search-button:hover {
-  background-color: #4bd452;
+.search-button:hover {
+  background-color: #17a11e;
 }
 
 .searching {
   margin: 40px;
+  text-align: center;
+}
+
+#search-input {
+  padding: 10px 50px;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #a197c4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: #8152ee;
+}
+
+.filtering {
+  display: flex;
+  align-items: center;
+  padding: 5px 40px;
+}
+
+#filter-button {
+  background-color: #8552fd;
+}
+
+#filter-button:hover {
+  background-color: #5841a8;
+}
+
+/* Agrega estilos para Pokémon con evolución */
+.has-evolution {
+  background-color: #da4b4b;
+  /* Agrega más estilos si es necesario */
 }
