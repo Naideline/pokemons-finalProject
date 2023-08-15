@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const multer = require("multer");
-const Pokemon = require("./models/pokemon.js"); 
+const Pokemon = require("./models/pokemon.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ db.once("open", () => {
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "public/images"); 
+    cb(null, "public/images");
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
@@ -34,7 +34,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.json()); 
+app.use(express.json());
 
 app.get("/pokemons", async (req, res) => {
   try {
@@ -49,7 +49,7 @@ app.post("/pokemons", upload.single("image"), async (req, res) => {
   const newPokemon = req.body;
 
   if (req.file) {
-    newPokemon.image = req.file.filename; 
+    newPokemon.image = req.file.filename;
   }
 
   try {
@@ -61,7 +61,5 @@ app.post("/pokemons", upload.single("image"), async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`Servidor en http://localhost:${PORT}`);
 });
-
-
